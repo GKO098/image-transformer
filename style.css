@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111;
+  background: #f6f7f9;
+}
+
+.page {
+  max-width: none;
+  margin: 0;
+  padding: 24px 32px;
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.controls {
+  margin-top: 16px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.control-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.file {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.control-grid label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-grid input[type="range"] {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+}
+
+.step-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 6px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.value-input {
+  width: 45px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.canvas-wrap {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.canvas-col {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.canvas-stack {
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  background: #111;
+  border-radius: 6px;
+  display: block;
+}
+
+#sourceCanvas {
+  position: relative;
+  z-index: 1;
+}
+
+#overlayCanvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+  z-index: 2;
+}
+
+.perspective {
+  margin-top: 20px;
+}
+
+.hint {
+  margin: 8px 0 12px;
+  color: #444;
+  font-size: 14px;
+}
+
+#pointStatus {
+  font-variant-numeric: tabular-nums;
+  color: #333;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0f0f0;
+}
+
+.btn-download {
+  background: #2ecc71;
+  border-color: #27ae60;
+  color: #fff;
+}
+
+.btn-download:hover {
+  background: #27ae60;
+}
